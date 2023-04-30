@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
 
-  base:
-    container_name: nodejs
-    build: .
-    command: bash -c 'echo "node.js  version $(node --version), npm version $(npm --version)"'
+    nodejs:
+        container_name: nodejs
+        build: .
+        command: >
+            bash -c 'echo "Node.js version $(node --version),
+            npm version $(npm --version)"'
